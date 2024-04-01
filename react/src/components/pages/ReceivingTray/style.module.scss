@@ -1,0 +1,45 @@
+.container {
+  height: 100%;
+  min-height: 92vh;
+  background-color: #eee;
+  padding: 20px;
+}
+
+.letters_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+
+  &_letter {
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    min-height: 300px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.163);
+
+    &_title {
+      padding: 0 30px;
+      border-bottom: solid 1px rgb(228, 228, 228);
+      display: flex;
+      justify-content: space-around;
+      background-color: #15943b;
+      border-radius: 10px 10px 0px 0px;
+      color: #fff;
+    }
+
+    &_content {
+      padding: 0px 30px;
+
+      &_group {
+        padding: 18px 0;
+      }
+
+      & > div > h2 {
+        margin: 0;
+      }
+    }
+  }
+}

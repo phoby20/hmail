@@ -1,0 +1,75 @@
+.button {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  border: none;
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  background: #15943b;
+  font-size: 18px;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.button:hover {
+  background: #37b05b;
+}
+.button:active {
+  background: #ffafb0;
+}
+
+.disabled_button {
+  cursor: not-allowed;
+  background: #37b05b;
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  border: none;
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.white_button {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  border: none;
+  color: black;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  background: white;
+  font-size: 18px;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}

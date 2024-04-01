@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+.container {
+  overflow: hidden;
+
+  &_wrap {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 120vh; // style.ts 파일의 customStyle의 높이랑 같게 해줘야 한다
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_form {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow:
+        0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+      position: relative;
+      width: 668px;
+      max-width: 100%;
+      padding: 32px;
+
+      &_inputs {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        margin-top: 40px;
+        margin-bottom: 32px;
+      }
+
+      &_btn {
+        margin-top: 44px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 18px;
+      }
+
+      &_map_wrap {
+        position: relative;
+        width: 100%;
+        height: 30vh;
+
+        &_map {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

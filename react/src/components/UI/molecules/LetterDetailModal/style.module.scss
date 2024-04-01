@@ -1,0 +1,62 @@
+.modal_overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(152, 152, 152, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 1;
+
+  &_window {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 8px 32px 0 rgba(135, 92, 31, 0.37);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
+    border-radius: 10px;
+    // border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+
+    &_title {
+      padding: 0 30px;
+      border-bottom: solid 1px rgb(228, 228, 228);
+      display: flex;
+      justify-content: space-around;
+      background-color: #15943b;
+      border-radius: 10px 10px 0px 0px;
+      color: #fff;
+    }
+
+    &_content {
+      padding: 0px 30px;
+
+      &_group {
+        padding: 18px 0;
+      }
+
+      & > div > h2,
+      p {
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    &_buttons {
+      padding: 20px;
+      border-top: solid 1px rgb(228, 228, 228);
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 18px;
+    }
+  }
+}

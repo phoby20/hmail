@@ -1,0 +1,39 @@
+.hamburgermenu {
+  width: 80%;
+  height: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding-top: 30px;
+  font-size: 26px;
+
+  &_back {
+    height: 36px;
+    margin-left: 75%;
+    padding-right: 30px;
+    margin-bottom: 16px;
+    text-align: end;
+    cursor: pointer;
+  }
+
+  &_wrap {
+    padding: 24px 20px;
+    height: calc(
+      100% - 36px - 16px
+    ); // 전체 높이에서 뒤로가기 버튼 높이만큼 빼준다
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &_detail > ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding-left: 0;
+      margin: 20px;
+
+      & > li {
+        padding: 20px 0px;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+version: "3.8"
+services:
+  react:
+    build:
+      # 독커파일명을 알려준다
+      dockerfile: Dockerfile.dev
+      # dockerfile의 위치를 얼려준다
+      context: ./react
+    container_name: react
+    volumes:
+      # 코드를 수정 후 다시 이미지를 빌드하지 않고 수정된 코드가 반영 될수 있게 볼륨을 이용
+      - /app/node_modules
+      - ./react:/app
+    # 리엑트 앱을 종료할 때 생기는 버그 방지
+    stdin_open: true
+    ports:
+      # 포트맵핑 <Host Port>:<Container Port>
+      - "3000:3000"
+
+  nginx:
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    ports:
+      # 포트맵핑 <Host Port>:<Container Port>
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/default.conf
+
+  express:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./express
+    container_name: express
+    volumes:
+      - /app/node_modules
+      - ./express:/app
+    ports:
+      - 8080:8080

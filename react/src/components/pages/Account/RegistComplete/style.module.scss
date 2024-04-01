@@ -1,0 +1,42 @@
+.container {
+  height: 100vh;
+  overflow: hidden;
+
+  &_body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &_wrap {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 708px;
+
+      & > h1 {
+        font-size: 40px;
+      }
+
+      &_btn {
+        width: 100%;
+        max-width: 278px;
+        z-index: 999;
+      }
+    }
+  }
+}
+
+.background_video {
+  overflow: hidden;
+  z-index: -1;
+  & > video {
+    height: 105vh; // 화면 비율에 따라서 오른쪽에 여백이 보이기 때문에 100vh는 불가
+  }
+}
